@@ -4,11 +4,11 @@
     <section id="hero">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8" id="hero-left"><img class="img-fluid" src="assets/img/celebrity_brand_you.png">
+                <div class="col-lg-8" id="hero-left"><img class="img-fluid" src="img/celebrity_brand_you.png">
                     <div id="hero-text-wrap"><span class="hero-text white-text text-blockhero-text">A Revolutionary System for Entrepreneurs and Professionals  to Become the Go-To Expert, Dominate Your Field, and  Eliminate the Competition </span></div>
                     <div id="hero-cta"><button class="btn btn-primary hero-cta" type="button">Click Here To Learn More</button></div>
                 </div>
-                <div class="col"><img class="img-fluid d-flex m-auto pulse animated" src="assets/img/book.png" alt="Celebrity Branding You" width="80%"></div>
+                <div class="col"><img class="img-fluid d-flex m-auto pulse animated" src="img/book.png" alt="Celebrity Branding You" width="80%"></div>
             </div>
         </div>
     </section>
@@ -26,10 +26,10 @@
                             could do it…If you have ever wondered if you could be the celebrity expert in your field…this book gives you the opportunity and the tools to make it happen. There is simply no excuse to wait any longer and we encourage you
                             to take action now, buy the book and start the process of Celebrity Branding You™.</p>
                     </div>
-                    <div class="col-md-6 col-xl-4 main-right"><img class="img-fluid" src="assets/img/add-one.png"><img class="img-fluid" src="assets/img/add-one_2.png"></div>
+                    <div class="col-md-6 col-xl-4 main-right"><img class="img-fluid" src="img/add-one.png"><img class="img-fluid" src="img/add-one_2.png"></div>
                 </div>
                 <div class="row">
-                    <div class="col"><img class="img-fluid d-flex justify-content-center align-content-center sinin" src="assets/img/as_sin_in.jpg"></div>
+                    <div class="col"><img class="img-fluid d-flex justify-content-center align-content-center sinin" src="img/as_sin_in.jpg"></div>
                 </div>
             </div>
         </main>
@@ -37,6 +37,6 @@
     <section id="testimonials">
         <div class="container"></div>
     </section>
-    
+
 
 <?php get_footer(); ?>
