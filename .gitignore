@@ -1,5 +1,10 @@
 *.log
 wp-config.php
+wp-settings.php
+wp-admin/
+wp-includes/
+wp-content/updraft
+wp-content/plugins
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
@@ -17,3 +22,16 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+xmlrpc.php
+wp-trackback.php
+wp-signup.php
+wp-mail.php
+wp-login.php
+wp-load.php
+wp-links-opml.php
+wp-cron.php
+wp-config-sample.php
+wp-comments-post.php
+wp-blog-header.php
+wp-activate.php
+index.php

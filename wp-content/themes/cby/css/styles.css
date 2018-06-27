@@ -1,0 +1,150 @@
+.navbar-light .navbar-brand {
+}
+
+header {
+  height:auto;
+  background-color:#9f2128;
+  background-image:url("../../assets/img/bg-header.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  box-shadow:1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+#navigation {
+  text-transform:uppercase;
+  font-size:16px;
+  color:white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+}
+
+.navbar.navbar-light.navbar-expand-md {
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+}
+
+#logo {
+  padding-top:25px;
+  padding-right:20px;
+  padding-left:20px;
+}
+
+#hero {
+  background-image:url("../../assets/img/bg-hero.jpg");
+  background-size:contain;
+  background-repeat:repeat-x;
+  background-position:top;
+  background-color:#9d242b;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
+.white-text {
+  color:#fff;
+}
+
+.text-block {
+}
+
+.hero-text {
+  font-family:lato;
+  font-size:24px;
+  font-weight:300;
+  text-align:center;
+}
+
+#hero-left {
+  text-align:center;
+}
+
+#hero-text-wrap {
+  padding-right:10px;
+  padding-left:10px;
+  background-image:url("../../assets/img/hero-text-bg.png");
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+  padding-top:20px;
+  padding-bottom:20px;
+  background-position:center;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.hero-cta {
+  background-color:#fff;
+  padding:10px;
+  color:#000;
+  border:0px;
+  text-transform:uppercase;
+  padding-left:40px;
+  font-weight:600;
+  background-image:url("../../assets/img/arrow_button.png");
+  background-repeat:no-repeat;
+  background-position:15px 15px;
+  background-size:8px;
+}
+
+.btn:not(:disabled):not(.disabled) {
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+}
+
+.main-left {
+  padding-top:40px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-bottom:40px;
+}
+
+.main-right {
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+#hero-cta {
+  margin-bottom:20px;
+}
+
+.sinin {
+}
+
+#testimonials {
+  background-image:url("../../assets/img/bg_testimonials.jpg");
+  height:380px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+#signup {
+  background-color:#3d3b3c;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.small-text {
+  font-size:11px;
+  font-family:Lato, sans-serif;
+  line-height:9px;
+  color:#fff;
+}
+
+p {
+}
+
+.footer-paragraph {
+  color:#fff;
+  font-size:18px;
+  font-family:Lato, sans-serif;
+}
+
+.nav-item {
+}
+
+.hero-cta:hover {
+  background-color:#000000;
+  color:#ffffff;
+}
+
