@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><?php bloginfo('name'); ?> <?php wp_title('&laquo', true, 'right'); ?></title>
+  <title><?php bloginfo('name'); ?> <?php wp_title(''); ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 
   <?php wp_head(); ?>
@@ -22,9 +22,8 @@
     </div>
     <nav class="navbar navbar-dark navbar-expand-sm">
       <div class="container-fluid"><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-
 <!-- Primary Menu -->
-  <?php wp_nav_menu( array( 'theme_location' => 'primary_menu', 'container_class' => 'collapse navbar-collapse', 'container_id' => 'navcol-1', 'menu_id' => 'navigation', 'menu_class' => 'nav navbar-nav mx-auto', 'item_class' => 'test'   ) ); ?>
+  <?php wp_nav_menu( array( 'theme_location' => 'primary_menu', 'container_class' => 'collapse navbar-collapse', 'container_id' => 'navcol-1', 'menu_id' => 'navigation', 'menu_class' => 'nav navbar-nav mx-auto'   ) ); ?>
       </div>
     </nav>
   </header>
