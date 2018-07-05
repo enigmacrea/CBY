@@ -12,6 +12,14 @@ function register_my_menus() {
 	);
 }
 
+//Step 3 :  Add this function to functions.php file to apply .mdl-navigation__link to each a element
+
+function add_menuclass($ulclass) {
+return preg_replace('/<a/', '<a class="nav-link"', $ulclass, -1);
+}
+add_filter('wp_nav_menu','add_menuclass');
+
+
 //Add support for featured images
 add_theme_support( 'post-thumbnails' );
 
@@ -22,71 +30,48 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-//Register CPT's
-// Register Custom Post Type
-function custom_post_type_1() {
-
-	$labels = array(
-		'name'                  => _x( 'Custom Posts', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Custom Post', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Custom Posts', 'text_domain' ),
-		'name_admin_bar'        => __( 'Custom Post', 'text_domain' ),
-		'archives'              => __( 'Item Archives', 'text_domain' ),
-		'attributes'            => __( 'Item Attributes', 'text_domain' ),
-		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-		'all_items'             => __( 'All Items', 'text_domain' ),
-		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-		'add_new'               => __( 'Add New', 'text_domain' ),
-		'new_item'              => __( 'New Item', 'text_domain' ),
-		'edit_item'             => __( 'Edit Item', 'text_domain' ),
-		'update_item'           => __( 'Update Item', 'text_domain' ),
-		'view_item'             => __( 'View Item', 'text_domain' ),
-		'view_items'            => __( 'View Items', 'text_domain' ),
-		'search_items'          => __( 'Search Item', 'text_domain' ),
-		'not_found'             => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-		'featured_image'        => __( 'Featured Image', 'text_domain' ),
-		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-		'items_list'            => __( 'Items list', 'text_domain' ),
-		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
-	);
-	$args = array(
-		'label'                 => __( 'Post Type', 'text_domain' ),
-		'description'           => __( 'Post Type Description', 'text_domain' ),
-		'labels'                => $labels,
-		'supports'              => false,
-		'taxonomies'            => array( 'category', 'post_tag' ),
-		'hierarchical'          => false,
-		'public'                => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => true,
-		'can_export'            => true,
-		'has_archive'           => true,
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
-	);
-	register_post_type( 'custom_post', $args );
-
-}
-
-//Initiate Custom Post Types
-add_action( 'init', 'custom_post_type_1', 0 );
-
 // Register our sidebars and widgetized areas. //
 function arphabet_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => 'Sidebar 1',
 		'id'            => 'sidebar1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer 1',
+		'id'            => 'footer1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer 2',
+		'id'            => 'footer2',
+		'before_widget' => '<p class="footer-paragraph">',
+		'after_widget'  => '</p>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer 3',
+		'id'            => 'footer3',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Disclamer',
+		'id'            => 'disclamer',
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
@@ -103,12 +88,21 @@ add_action( 'widgets_init', 'arphabet_widgets_init' );
 	 // WP Core Stylesheet.
 	 wp_enqueue_style( 'wpcore_style-css', get_theme_file_uri( 'style.css', array(), '1.0'  ) );
 	 // bootstrap Stylesheets.
-	 wp_enqueue_style( 'bootstrap-css', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css' );
+	 wp_enqueue_style( 'bootstrap-css', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css' );
 	 // wp_enqueue_style( 'bootstrap_theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css' );
 	 // Swiper Carousel Plugin
-	 wp_enqueue_style( 'swiper-css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css' );
-	 // WP Theme Sass.
-	 wp_enqueue_style( 'custom-css', get_theme_file_uri( '/css/style.min.css', array(), '1.0'  ) );
+	 // wp_enqueue_style( 'swiper-css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css' );
+	 // WP Theme CSS
+	 wp_enqueue_style( 'custom-css', get_theme_file_uri( 'custom.css', array(), '1.0'  ) );
+	 // Owl
+ 	wp_enqueue_style( 'owl-css', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css');
+	// AnimteCSS
+	wp_enqueue_style( 'animatecss', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+	// Google Fonts
+	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,700');
+	// Owl Thumbs plugin
+	// wp_enqueue_script( 'custom-js', get_theme_file_uri( '/js/owl.carousel2.thumbs.js', array(), '1.0'  ) );
+
 }
 add_action( 'wp_enqueue_scripts', 'header_scripts' );
 
@@ -117,7 +111,7 @@ add_action( 'wp_enqueue_scripts', 'header_scripts' );
  */
 function footer_scripts() {
 	//deregister default WP JQuery
-	wp_deregister_script('jquery');
+	// wp_deregister_script('jquery');
 	// JQuery JS
 	wp_enqueue_script( 'javascript-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js');
 	// JQuery UI JS
@@ -125,9 +119,15 @@ function footer_scripts() {
 	// bootstrap JS
 	wp_enqueue_script( 'bootstrap-js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.bundle.js');
 	// Swiper JS
-	wp_enqueue_script( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js');
+	// wp_enqueue_script( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js');
 	// Font Awesome
-	wp_enqueue_script( 'fa-js', 'https://use.fontawesome.com/1b797d079d.js');
+	// wp_enqueue_script( 'fa-js', 'https://use.fontawesome.com/1b797d079d.js');
+	// Owl JS
+	wp_enqueue_script( 'owl-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js');
+	// Owl Custom
+	 wp_enqueue_script( 'custom-js', get_theme_file_uri( '/js/owl.js', array(), '1.0'  ) );
+
+
 }
 add_action( 'get_footer', 'footer_scripts' );
 

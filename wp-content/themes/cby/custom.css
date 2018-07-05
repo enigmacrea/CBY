@@ -1,10 +1,11 @@
+
 .navbar-light .navbar-brand {
 }
 
 header {
   height:auto;
   background-color:#9f2128;
-  background-image:url("../../assets/img/bg-header.jpg");
+  background-image:url("img/bg-header.jpg");
   background-repeat:no-repeat;
   background-size:cover;
   box-shadow:1px 2px 4px rgba(0, 0, 0, .5);
@@ -32,7 +33,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 #hero {
-  background-image:url("../../assets/img/bg-hero.jpg");
+  background-image:url("img/bg-hero.jpg");
   background-size:contain;
   background-repeat:repeat-x;
   background-position:top;
@@ -62,7 +63,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 #hero-text-wrap {
   padding-right:10px;
   padding-left:10px;
-  background-image:url("../../assets/img/hero-text-bg.png");
+  background-image:url("img/hero-text-bg.png");
   background-size:100% 100%;
   background-repeat:no-repeat;
   padding-top:20px;
@@ -80,7 +81,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   text-transform:uppercase;
   padding-left:40px;
   font-weight:600;
-  background-image:url("../../assets/img/arrow_button.png");
+  background-image:url("img/arrow_button.png");
   background-repeat:no-repeat;
   background-position:15px 15px;
   background-size:8px;
@@ -112,7 +113,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 #testimonials {
-  background-image:url("../../assets/img/bg_testimonials.jpg");
+  background-image:url("img/bg_testimonials.jpg");
   height:380px;
   padding-top:20px;
   padding-bottom:20px;
@@ -147,4 +148,69 @@ p {
   background-color:#000000;
   color:#ffffff;
 }
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
 
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 40px;
+}
+
+.footer-basic ul a {
+  color:rgb(76,76,76);
+  text-decoration:none;
+  opacity:0.8;
+  font-size:14px;
+  font-family:Lato, sans-serif;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:14px;
+  color:#aaa;
+  margin-bottom:0;
+  font-family:Lato, sans-serif;
+}
+
+.redtext {
+  color: red;
+}
