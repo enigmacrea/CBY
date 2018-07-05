@@ -67,7 +67,25 @@
   </main>
 </section>
 <section id="testimonials">
-  <div class="container"></div>
+  <div class="container">
+
+
+    <div class="owl-carousel owl-theme">
+
+    <div class="item">
+      <div class="bubble">
+        Some textarea
+      </div>
+      <div class="person">
+        foto de persona
+      </div>
+    </div>
+
+</div>
+
+
+
+  </div>
 </section>
 
 

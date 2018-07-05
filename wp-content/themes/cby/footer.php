@@ -31,7 +31,7 @@
           <?php if ( is_active_sidebar( 'footer3' ) ) : ?>
             <?php dynamic_sidebar( 'footer3' ); ?>
           <?php endif; ?>
-          
+
           <!-- Form -->
         <?php get_template_part( 'form' ); ?>
 
